@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>Research Interests</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Home</div>
+<div class="menu-item"><a href="index.html">About&nbsp;Us</a></div>
+<div class="menu-category">People</div>
+<div class="menu-item"><a href="people.html">Members</a></div>
+<div class="menu-item"><a href="join.html">How&nbsp;to&nbsp;Join</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="research.html" class="current">Research&nbsp;Interests</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-category">Contact</div>
+<div class="menu-item"><a href="contact.html">Contact</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Research Interests</h1>
+</div>
+<p>We solve problems in machine learning caused by <i>finite-precision arithmetic</i>, the arithmetic computers actually use. Our main tool is machine learning theory, which asks why modern machine learning works, using mathematics: what functions can a model compute (expressivity)? Why does training find good parameters (optimization)? And why does a trained model work on data it has never seen (generalization)?</p>
+<h2>Why Finite-Precision Arithmetic?</h2>
+<p><b>Computers do not compute with real numbers.</b> Mathematics works with infinitely many real numbers and exact operations. A computer does not: it uses finite-precision arithmetic, such as floating-point arithmetic, which can represent only finitely many numbers, and almost every operation rounds its result to a representable number. Machine learning theory, however, is usually developed under ideal real-number arithmetic, while every deployed model runs on finite-precision arithmetic. A central question of our lab is:</p>
+<p style="text-align: center; margin: 1em 2em;"><i>Do the conclusions derived under idealized mathematics survive on a real computer?</i></p>
+<p>The answer is often no, and in surprising ways: rounding is not merely a small error added at the end, but a change in the model of computation itself.</p>
+<p><b>Finite precision changes what networks can express.</b> Consider a neural network whose activation function is the identity function, so that the network does nothing but compose affine maps. Under real arithmetic, such a network can compute only affine functions. Under floating-point arithmetic, the same architecture can approximate essentially arbitrary functions, because the rounding in each operation itself acts as a nonlinearity. Results of this kind show that the expressive power of a network on a real computer can differ fundamentally from its expressive power under real arithmetic. We have characterized which functions floating-point networks and transformers can represent, and how much depth and width they need to do so.</p>
+<p><b>Training and generalization change as well.</b> Learning algorithms are also executed in finite-precision arithmetic. The gradients used in training are produced by automatic differentiation, which does not always compute the true mathematical gradient; we study what it actually computes, and when and why it is correct. Moreover, convergence guarantees for optimization algorithms and generalization bounds for the trained models, proven under exact arithmetic, can break or degrade once rounding is taken into account. We develop theory for training and generalization that holds under finite precision.</p>
+<p><b>The gap creates security, privacy, and verification problems.</b> A privacy mechanism that is provably private in the idealized model can leak private data through its rounding patterns. A model certified to be robust against adversarial inputs can still be attacked when it runs in floating point. And a formal proof about a mathematical model of a network may not hold for the network that actually runs. We study when such failures happen and how to prevent them, aiming at guarantees for the computation that is actually performed rather than for its idealized model.</p>
+<h2>Current Directions</h2>
+<ul>
+<li><p>Expressive power of neural networks and transformers, under both exact and finite-precision arithmetic</p>
+</li>
+<li><p>Correctness of automatic differentiation</p>
+</li>
+<li><p>Convergence of optimization algorithms and generalization of trained models, under both exact and finite-precision arithmetic</p>
+</li>
+<li><p>Security, privacy, and verification problems incurred by finite-precision arithmetic</p>
+</li>
+</ul>
+<p>See <a href="publications.html">Publications</a> for our results on these questions, such as how narrow a network can be while remaining a universal approximator, what automatic differentiation actually computes for neural networks, and what floating-point networks can and cannot represent. If these questions interest you, see <a href="join.html">How to Join</a>.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
