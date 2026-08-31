@@ -17,8 +17,10 @@ edit the HTML.
 ## Files
 
 - `index.html` — About Us: intro
-- `people.html` — Members: professor, current members, alumni (names only, no
-  photos by choice)
+- `people.html` — Members: professor (name only, linked to `bio.html`),
+  current members, alumni (names only, no photos by choice)
+- `bio.html` — the professor's bio (career history, Google Scholar link);
+  linked from `people.html`, not in the sidebar menu
 - `research.html` — Research interests
 - `publications.html` — Conference and journal papers
 - `join.html` — Information for prospective students
