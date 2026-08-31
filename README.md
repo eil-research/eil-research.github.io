@@ -17,9 +17,9 @@ edit the HTML.
 ## Files
 
 - `index.html` — About Us: intro
-- `people.html` — Members: professor (name only, linked to `bio.html`),
+- `people.html` — Members: professor (linked to `sejun.html`, "(Associate Professor)" suffix),
   current members, alumni (names only, no photos by choice)
-- `bio.html` — the professor's bio (career history, Google Scholar link);
+- `sejun.html` — the professor's bio (career history, Google Scholar link);
   linked from `people.html`, not in the sidebar menu
 - `research.html` — Research interests
 - `publications.html` — Conference and journal papers
